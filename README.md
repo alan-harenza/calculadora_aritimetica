@@ -1,18 +1,18 @@
 # Arithmetic Formatter
 This is the first project of four, for the "Scientific Computing with Python" course\
-on the "www.freecodecamp.com".\
+on the "www.freecodecamp.com".
 
-For any further details of for more information pay a visit to the website above.\
+For any further details of for more information pay a visit to the website above.
 
-Students in primary school often arrange arithmetic problems vertically \
-to make them easier to solve. For example, "235 + 52" becomes:\
+Students in primary school often arrange arithmetic problems vertically\
+to make them easier to solve. For example, "235 + 52" becomes:
 
 ![alt text](first_image.PNG)
 
 Finish the arithmetic_arranger function that receives a list of strings\
 which are arithmetic problems, and returns the problems arranged vertically\ 
 and side-by-side. The function should optionally take a second argument.\
-When the second argument is set to True, the answers should be displayed.\
+When the second argument is set to True, the answers should be displayed.
 
 # Example
 
