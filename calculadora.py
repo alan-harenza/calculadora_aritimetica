@@ -1,23 +1,23 @@
-expressions = ["28 + 18", "100 * 36"]
+expressions = ["100 - 36", "28 + 18"]
 first_number = []
 second_number = []
 operation_row = []
 
+# first step, seeing if the problem conditions fits in the scenarios
 for expression in expressions:
+    if len(expressions) > 5:
+        print("too many expressions!")
     separation = expression.split()
-    # print(separation)
-    first_number.append(separation[0])
-    operation_row.append(separation[1])
-    second_number.append(separation[2])
-    for sign_operation in operation_row:
-        if sign_operation == "/" or sign_operation == "*":
-            print("invalid sign operation")
-            quit()
-    for number_first_row in first_number:
-        if not number_first_row.isnumeric():
-            print("must have only numbers")
-            quit()
-    for number_second_row in second_number:
-        if not number_second_row.isnumeric():
-            print("must have only numbers")
-            quit()
+    # validation of the math operator
+    if separation[1] == "/" or expression[1] == "*":
+        print("invalid sign operation")
+        quit()
+    # validation if the first sequence of before the math operator is a number
+    if not separation[0].isnumeric():
+        print("must have only numbers before the sign operation")
+        quit()
+    # validation if the second sequence of after the math operator is a number
+    if not separation[2].isnumeric():
+        print("must have only numbers after the sign operation")
+        quit()
+# print('validation step is ok to go')
