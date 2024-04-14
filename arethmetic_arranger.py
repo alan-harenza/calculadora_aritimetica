@@ -1,14 +1,8 @@
 def artihmetc_arranger(problems, result_parameter=False):
-    first_line = []
-    second_line = []
-    operation_sign = []
-    result_line = []
-    dot_line = []
-
     # first step, seeing if the problem conditions fits in the scenario
+    if len(problems) > 5:
+        print("Error: Too many problems")
     for expression in problems:
-        if len(problems) > 5:
-            print("Error: Too many problems")
         separation = expression.split()
         # validation of the math operator
         if separation[1] == "/" or expression[1] == "*":
@@ -24,28 +18,20 @@ def artihmetc_arranger(problems, result_parameter=False):
             quit()
     # print('validation step is ok to go')
 
-    # second step, identifying the sign operator
-        if separation[1] == '+':
+        # second step, identifying the sign operator
+    for expressions in problems:
+        string_division = expressions.split()
+        if string_division[1] == '+':
             # return 'sum'
-            if result_parameter is False:
-                # return 'dont show result'
-                pass
-
-            elif result_parameter is True:
-                # return 'show result'
-                pass
-
-        elif separation[1] == '-':
-            # return 'subtraction'
-            if result_parameter is False:
-                # return 'dont show result'
-                pass
-
-            elif result_parameter is True:
-                # return 'show result'
-                pass
+            if len(string_division[0]) > len(string_division[2]):
+                trace_line = len(string_division[0]) * '-' + 2 * '-'
+            elif len(string_division[0]) < len(string_division[2]):
+                trace_line = len(string_division[2]) * '-' + 2 * '-'
+            elif len(string_division[0]) == len(string_division[2]):
+                trace_line = len(string_division[0]) * '-' + 2 * '-'
+        return trace_line               
 
 
-problems = ["25 + 18"]
-test = artihmetc_arranger(problems, True)
+problems = ["1000 + 5"]
+test = artihmetc_arranger(problems, False)
 print(test)
